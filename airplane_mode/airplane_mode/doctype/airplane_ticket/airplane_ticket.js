@@ -3,8 +3,36 @@
 
 frappe.ui.form.on("Airplane Ticket", {
     
+    // refresh(frm){
+
+    // },
+    
+    
     refresh(frm) {
-        
+        // let data = ""
+        let d = new frappe.ui.Dialog({
+            title: 'Enter Seat No.',
+            fields: [
+                {
+                    label: 'Seat No',
+                    fieldname: 'seat_no',
+                    fieldtype: 'Data'
+                },
+            ],
+            size: 'small', // small, large, extra-large 
+            primary_action_label: 'Assign',
+            primary_action(values) {
+                console.log(frm.doc);
+                d.hide();
+                frm.doc.seat = values.seat_no
+                cur_frm.refresh()
+            }
+    
+        });
+
+        frm.add_custom_button('Assign Seat',()=>{
+                d.show()
+            },"Action")
 	},
     
     

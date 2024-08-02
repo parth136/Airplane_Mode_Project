@@ -118,25 +118,68 @@ class AirplaneTicket(Document):
 		# print('---------------------')
 
 		# data = self.seat
-		int_part = int(random.random()*100)
-		str_part = str.capitalize(random.choice(string.ascii_letters))
-		seat_no = str(int_part)+str_part
+
+		# seat no. logic with python
+		# int_part = int(random.random()*100)
+		# str_part = str.capitalize(random.choice(string.ascii_letters))
+		# seat_no = str(int_part)+str_part
 		
 		# frappe.db.set_value(self.doctype, self.name, "seat", str(seat_no))
 		# frappe.msgprint('kkkkk')
 		# self.db_set("seat", seat_no)
-		self.seat = seat_no
+		# self.seat = seat_no
 		# self.save()
 		print('=======')
-		print('999999999999', seat_no, self.name)
+		# print('999999999999', seat_no, self.name)
 		print('=======')
 		
 		# self.seat_no()
 
+	def before_insert(self):
+		print("----------")
+		
+		flight_var = self.flight
+		flight_split = flight_var.split('-')
+		check = 0
+		airline_name=""
+		for i in flight_split:
+			if check > 1:
+				break
+			if check == 0:
+				airline_name = i+'-'
+			else:
+				airline_name = airline_name + i
+			check = check+1
+
+		document = frappe.get_doc("Airplane", airline_name)
+
+
+
+		# getting all the tickets in that flight
+
+		document2 = frappe.db.get_all('Airplane Ticket',
+
+				fields=['name'],
+				order_by='name desc',
+				# group_by='flight',
+				# as_tuple=1,
+				# unique=0
+		)
+
+		count = 0
+		for i in document2:
+			# print('+++++++',i)
+			if airline_name in str(i):
+				# print(i)
+				count = count + 1
+
+		if count >= document.capacity:
+			frappe.throw("Flight is full, you cant get ticket. Sorry.")
+		print("----------")
 	
 
 
-
+# SELECT * FROM `tabairplane_ticket_add_on_item`;
 
 
 
