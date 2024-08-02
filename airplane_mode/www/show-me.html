@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div>{{ frappe.get_url() }}</div>
+    <div>{{ frappe.form_dict.values() }}</div>
+    <div>{{ frappe.form_dict.values() }}</div>
+    <div>{{frappe.form_dict['color']}}</div>
+
+    {% if  frappe.form_dict['color'] == 'none' %}
+    
+    <div style="height: 400px; width: 900px; margin: 50px; background-color: black"></div>
+    
+    {% else %}
+    
+    <div style="height: 400px; width: 900px; margin: 50px; background-color: {{frappe.form_dict['color']}}"></div>
+
+    {% endif %}
+</body>
+</html>

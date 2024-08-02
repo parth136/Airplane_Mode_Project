@@ -1,0 +1,26 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title }}</h1>
+
+<h3>Flight Details</h3>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <!-- <h3 class="card-title">Flight Details</h3> -->
+      <!-- {%- set mystring = airplane -%}
+      {{-mystring.replace("-", "")-}} -->
+      <ul>
+      <li>Airline: {{ airplane }}</li>
+      <li>{{ source_airport_code }}  -&gt; {{ destination_airport_code }}</li>
+      <li>{{ frappe.utils.format_date(date_of_departure, "d MMMM, YYYY") }} | {{ time_of_departure }}</li>
+      <li>Duration: {{ frappe.utils.format_duration(duration) }}</li>
+    </ul>
+    </div>
+  </div>
+  <a href="-flight-ticket-web-form/new?flight={{title}}" class="btn btn-primary px-5 py-4 my-4">Book Flight</a>
+
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

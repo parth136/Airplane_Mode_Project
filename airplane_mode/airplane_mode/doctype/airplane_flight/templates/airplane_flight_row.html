@@ -1,0 +1,32 @@
+<!-- <div>
+	<h3><a href="{{ doc.route }}">{{ doc.title or doc.name }}</a></h3>
+	
+</div>
+<div>
+	<div class="web-list-item">
+		<div class="row">
+		<div class="col-xs-8">
+				 <p>{{ doc.source_airport_code }}  -&gt; {{ doc.destination_airport_code }}</p>
+				 <p>{{ doc.date_of_departure }}  </p>
+				 <p>{{ doc.time_of_departure }}  </p>
+				 <p>{{ doc.duration }}  </p>
+				 <a href="details">View Flights</a>
+
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+<div class="card w-75 m-2">
+	<div class="card-body">
+	  <h5 class="card-title">{{ doc.title or doc.name }}</h5>
+	  <p class="card-text">{{ doc.source_airport_code }}  -&gt; {{ doc.destination_airport_code }}</p>
+	  <p class="card-text"> {{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} | {{ doc.time_of_departure }} | {{ frappe.utils.format_duration(doc.duration) }}</p>
+	  <a href="{{ doc.route  }}" class="btn btn-primary">View Flights</a>
+	</div>
+  </div>
+
+
+
+<!-- this is a sample default list template -->
