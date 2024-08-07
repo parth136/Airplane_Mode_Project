@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{%  extends "templates/web.html" %}
+
+{% block title %}Avaliable Shops{% endblock %}
+
+{% block page_content %}
+    <h1>Shops Avaliable For Lease:</h1>
+
+    <div>
+        
+        {% set doc = frappe.get_list('Shops', filters={'owned_by': ''}, fields=['name1','airport', 'airport_code', 'area','rent']) %}
+        {% for i in doc %}
+        
+        <div class="card m-4 p-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Shop Name: {{ i.name1 }}</h5>
+              <h6 class="card-subtitle mb-2 ">Airport: {{ i.airport }}</h6>
+              <h6 class="card-subtitle mb-2 ">Airport Code: {{ i.airport_code }}</h6>
+              <h6 class="card-subtitle mb-2 ">Area: {{ i.area }}</h6>
+              <h6 class="card-subtitle mb-2 ">Rent: {{frappe.format_value(i.rent, {"fieldtype":"Currency"})}} INR</h6>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+    {% endblock %}

@@ -10,6 +10,7 @@
   "airline_section",
   "founding_year",
   "customer_care_number",
+  "column_break_tdyt",
   "headquarters",
   "route"
  ],
@@ -44,6 +45,10 @@
    "fieldtype": "Data",
    "label": "Website",
    "options": "URL"
+  },
+  {
+   "fieldname": "column_break_tdyt",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -53,7 +58,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2024-08-02 14:42:43.169408",
+ "modified": "2024-08-07 12:03:10.600354",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",

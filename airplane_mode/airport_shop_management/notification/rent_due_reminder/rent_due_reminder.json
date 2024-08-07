@@ -1,0 +1,33 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-08-06 12:10:42.877177",
+ "date_changed": "rent_due_date",
+ "days_in_advance": 30,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Owner Of Shops",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 1,
+ "is_standard": 1,
+ "message": "<p>Your rent is due for this month. Thankyou.</p>\n",
+ "message_type": "Markdown",
+ "modified": "2024-08-07 16:48:26.835097",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Rent Due Reminder",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "",
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "AirportShop",
+ "sender_email": "parth@sanskartechnolab.com",
+ "subject": "Friendly Reminder",
+ "value_changed": "contact"
+}

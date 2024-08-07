@@ -9,6 +9,7 @@
   "airplane_section",
   "model",
   "airline",
+  "column_break_mnoa",
   "capacity",
   "initial_audit_completed"
  ],
@@ -46,11 +47,15 @@
    "fieldtype": "Check",
    "label": "Initial Audit Completed",
    "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_mnoa",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-02 12:34:24.142869",
+ "modified": "2024-08-07 12:04:11.762721",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",

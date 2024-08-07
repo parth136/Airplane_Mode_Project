@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2024-08-06 10:36:43.566986",
+ "date_changed": "date_of_expiry",
+ "days_in_advance": 30,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Shops",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Your rent is due.",
+ "message_type": "Markdown",
+ "modified": "2024-08-06 10:36:43.566986",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Rent Due Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Friendly Reminder: Rent due for this month"
+}

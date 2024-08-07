@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{name1}-{airport_code}-{###}",
+ "creation": "2024-08-05 14:59:45.461623",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "airport",
+  "airport_code",
+  "area",
+  "column_break_95rp",
+  "rent",
+  "owned_by",
+  "last_rent_paid_date",
+  "date_of_expiry"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Area",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date Of Expiry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_95rp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "airport.code",
+   "fieldname": "airport_code",
+   "fieldtype": "Data",
+   "label": "Airport Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_rent_paid_date",
+   "fieldtype": "Date",
+   "label": "Last Rent Paid Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owned_by",
+   "fieldtype": "Data",
+   "label": "Owned by",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-06 11:49:37.166224",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shops",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

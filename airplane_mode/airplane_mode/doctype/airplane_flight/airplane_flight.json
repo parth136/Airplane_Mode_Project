@@ -14,12 +14,16 @@
   "time_of_departure",
   "duration",
   "status",
+  "gate_number",
+  "column_break_nu24",
   "source_airport",
-  "destination_airport",
   "source_airport_code",
+  "destination_airport",
   "destination_airport_code",
   "route",
-  "published"
+  "published",
+  "section_break_qojs",
+  "crew_member"
  ],
  "fields": [
   {
@@ -108,6 +112,27 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "published"
+  },
+  {
+   "fieldname": "crew_member",
+   "fieldtype": "Table",
+   "label": "Crew Member",
+   "options": "Members Included In Flight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Select",
+   "label": "Gate Number",
+   "options": "1A\n1B\n2A\n2B"
+  },
+  {
+   "fieldname": "column_break_nu24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qojs",
+   "fieldtype": "Section Break"
   }
  ],
  "has_web_view": 1,
@@ -120,7 +145,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-08-02 11:02:58.396289",
+ "modified": "2024-08-07 12:01:48.349417",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

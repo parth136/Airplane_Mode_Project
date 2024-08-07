@@ -9,7 +9,10 @@
   "airport_section",
   "code",
   "city",
-  "country"
+  "country",
+  "column_break_oi85",
+  "number_of_shops",
+  "number_of_shops_available_for_lease"
  ],
  "fields": [
   {
@@ -37,11 +40,35 @@
    "in_list_view": 1,
    "label": "Country",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "number_of_shops",
+   "fieldtype": "Int",
+   "label": "Total Number Of Shops",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_shops_available_for_lease",
+   "fieldtype": "Int",
+   "label": "Number Of Shops Available for Lease",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oi85",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-08-02 11:34:46.300799",
+ "links": [
+  {
+   "link_doctype": "Shops",
+   "link_fieldname": "airport"
+  }
+ ],
+ "modified": "2024-08-07 11:59:25.002455",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airport",

@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{name1}-{###}",
+ "creation": "2024-08-05 15:07:37.061774",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "contact",
+  "email",
+  "column_break_d7em",
+  "last_rent_paid_date",
+  "rent_due_date",
+  "section_break_dvme",
+  "owned_shops"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Contact",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "owned_shops",
+   "fieldtype": "Table",
+   "label": "Owned Shops",
+   "options": "Owned Shops"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_rent_paid_date",
+   "fieldtype": "Date",
+   "label": "Last Rent Paid Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rent_due_date",
+   "fieldtype": "Date",
+   "label": "Rent Due Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_d7em",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dvme",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-07 11:58:37.333725",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Owner Of Shops",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

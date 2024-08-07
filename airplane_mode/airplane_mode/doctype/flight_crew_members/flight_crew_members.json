@@ -1,23 +1,18 @@
 {
  "actions": [],
  "autoname": "autoincrement",
- "creation": "2024-07-29 13:56:55.361840",
+ "creation": "2024-08-02 16:37:31.150166",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "flight_passenger_section",
   "first_name",
   "last_name",
-  "column_break_vjys",
   "date_of_birth",
-  "full_name"
+  "column_break_rxjr",
+  "full_name",
+  "type"
  ],
  "fields": [
-  {
-   "fieldname": "flight_passenger_section",
-   "fieldtype": "Section Break",
-   "label": "Flight Passenger"
-  },
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
@@ -46,21 +41,22 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_vjys",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Captain\nChief engineer\nCook\nDeckhand\nFirst mate\nSecond mate"
+  },
+  {
+   "fieldname": "column_break_rxjr",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Airplane Ticket",
-   "link_fieldname": "passenger"
-  }
- ],
- "modified": "2024-08-07 12:05:16.155246",
+ "links": [],
+ "modified": "2024-08-07 12:02:26.812210",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
- "name": "Flight Passenger",
+ "name": "Flight Crew Members",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
@@ -81,5 +77,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "full_name"
+ "title_field": "full_name",
+ "translated_doctype": 1
 }
