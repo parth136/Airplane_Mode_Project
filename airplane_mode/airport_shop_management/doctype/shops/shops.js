@@ -10,12 +10,13 @@ frappe.ui.form.on("Shops", {
             method:
               "airplane_mode.airplane_mode.api.set_rent.set_rent",
             args: {
+              data:frm.doc,
             },
             freeze: true,
             freeze_message: "This is freeze message",
             callback(e) {
-                frm.doc.rent=e.message
-                console.log(e.message);
+                // frm.doc.rent=e.message
+                // console.log(e.message);
           },
           });
 
